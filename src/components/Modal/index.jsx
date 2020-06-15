@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { portal } from '../../hoc/portal';
-import OutsideClick from '../../hoc/OutsideClick';
+import { portal } from '../hoc/portal';
+import OutsideClick from '../hoc/OutsideClick';
 
 import { CloseIcon } from '../../assets/icons';
 
