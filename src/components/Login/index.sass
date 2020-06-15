@@ -1,0 +1,80 @@
+.Login, .Registration
+    height: 100%
+    width: 100%
+    display: flex
+    flex-flow: row
+    background-position: center center
+    background-repeat: no-repeat
+    background-attachment: fixed
+    background-size: cover
+    justify-content: flex-end
+
+    &--backgroundImage0
+        background-image: url(../../assets/login/4.jpg)
+
+    &--backgroundImage1
+        background-image: url(../../assets/login/2.jpg)
+
+    &--backgroundImage2
+        background-image: url(../../assets/login/3.jpg)
+
+    &--backgroundImage3
+        background-image: url(../../assets/login/1.jpg)
+
+    &--backgroundImage4
+        background-image: url(../../assets/login/5.jpg)
+
+    &__Modal
+        overflow: auto
+        width: 17%
+        height: 100%
+        display: flex
+        flex-flow: column
+        background: #F2F2F2
+        box-shadow: -9px 2px 40px 10px rgba(0,0,0,0.75)
+        border-left: 5px solid #3E939E
+        border-bottom: 5px solid #3E939E
+        animation-name: slid
+        animation-duration: 1s
+        
+        &--isMobile
+            width: 100%
+            border: 5px solid #3E939E
+
+        &--Header
+            widht: 100%
+            display: flex
+            justify-content: center
+
+            img
+                width: 200px
+
+        &--Body
+            display: flex
+            flex-flow: column
+            height: 80%
+            padding: 20px
+    
+            ._Button
+                margin: 25px 0
+        
+        &--Footer
+            display: flex
+            justify-content: space-between
+            align-items: center
+            height: 20%
+            padding: 0 20px
+            min-height: 100px
+
+@keyframes slid 
+    0%
+        transform: translateX(100%)
+    100%
+        transform: translateX(0)
+
+@keyframes appearance 
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+  

@@ -1,0 +1,106 @@
+@import './config'
+
+html, body
+	width: 100%
+	background: $palette--background
+	color: $palette--color
+	height: 100%
+	overflow: hidden
+	font-family: 'Open Sans', sans-serif
+	font-size: 14px
+	margin: 0
+
+input, textarea:focus
+		outline: 0
+
+#app , .App
+	height: 100%
+	width: 100%
+
+h2
+    resetHeader()
+    display: block
+    height: 48px
+    line-height: 48px
+    padding: 0 10px
+    font-size: 18px
+    color: $palette_success--color
+    font-weight: bold
+
+h3
+    resetHeader()
+    display: block
+    height: 40px
+    line-height: 40px
+    padding: 0 10px
+    font-size: 18px
+    color: $palette--color
+    font-weight: bold
+
+    
+.-withRightMargin
+	margin-right: 10px
+
+._TextInput,
+._NumberInput,
+._TextareaInput,
+._SelectInput,
+._PostfixInput
+    border: 1px solid #d1d1d1
+
+._Form
+	width: 100%
+
+	&__Field
+		margin: 10px 0
+		text-align: left
+
+		a
+			color: $palette_success--color
+
+		&--Inline
+
+			._Form
+
+				&__Label
+					margin-right: 10px
+
+	&__Label
+		line-height: 2.3em
+		font-size: 16px
+		font-weight: 600
+		color: $palette_success--color
+		white-space: nowrap
+
+		&::after
+			content: ':'
+
+	&__Error
+		margin-top: 5px
+		padding: 5px 20px
+		text-align: left
+		background: $palette_danger--color
+		color: #FFF
+
+		&:first-of-type
+			margin-top: 10px
+
+	&__View
+		font-weight: 600
+
+	&__Group
+		padding: 0
+		border: none
+
+		&Header
+			display: flex
+			align-items: center
+			margin: 15px 0
+
+		&Title
+			display: inline-block
+			padding: 0
+			margin-right: 10px
+			font-size: 20px
+			font-weight: 600
+			color: $palette_notice--color

@@ -1,0 +1,72 @@
+@import 'common/index', 'common/config'
+
+._Button
+	resetLink()
+	font-weight: 700
+	display: inline-block
+	white-space: nowrap
+	padding: 0 10px
+	border-radius: $borderRadius
+	vertical-align: middle
+	cursor: pointer
+	height: 2.25em
+	line-height: 2.25em
+	user-select: none
+	color: $palette_button--color
+	border: 1px solid $palette_button--border
+	background: $palette_button--background
+    
+	&:focus
+		outline: 0
+		box-shadow: 0px 0px 5px 1px $palette_main--purple
+		resetLink()
+
+	&--Notice
+		border-color: $palette_notice--border
+		background: $palette_notice--background
+		color: #FFF
+
+	&--Success
+		border-color: $palette_success--color
+		background: $palette_success--background
+		color: palette_success--color
+
+	&--Warning
+		border-color: $palette_warning--border
+		background: $palette_warning--background
+		color: $palette_warning--color
+
+	&--Danger
+		border-color: $palette_danger--border
+		background: $palette_danger--color
+		color: $palette_danger--color
+
+	&--Ghost
+		background: transparent
+		color: $palette--color
+
+	&--Ghost, &--Notice
+		color: $palette_notice--color
+
+	&--Ghost, &--Success
+		color: $palette_notice--color
+
+	&--Ghost, &--Warning
+		color: $palette_warning--color
+
+	&--Ghost, &--Danger
+		color: $palette_danger--color
+
+	/* Size */
+
+	&--Bigger
+		font-size: 1.1rem
+
+	&--Biggest
+		font-size: 1.4rem
+
+	&--Smaller
+		font-size: 0.9rem
+
+	&--Smallest
+		font-size: 0.8rem

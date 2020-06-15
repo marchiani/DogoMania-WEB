@@ -1,0 +1,39 @@
+
+@import 'common/config'
+
+._Toast
+	background: #FFF
+	border-left: 3px solid $palette_main--lightPurple
+	padding: 10px 20px
+	layer()
+	margin-top: 20px
+
+	&__Title
+		font-size: 1.2em
+		color: $palette--color
+
+		&:not(:last-child)
+			margin-bottom: .4em
+
+	&__Message
+		white-space: pre-line
+
+	&--Notice
+		border-color: $palette_notice--border
+
+	&--Success
+		border-color: $palette_success--border
+
+	&--Warning
+		border-color: $palette_warning--border
+
+	&--Danger
+		border-color: $palette_danger--border
+
+	&__Overlay
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		position: absolute
+		top: 0
+		right: 20px

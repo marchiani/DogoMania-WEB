@@ -1,0 +1,38 @@
+@import 'common/config'
+
+._Modal
+	margin: auto
+	background: $palette--background
+	layer()
+	position: relative;
+
+	&__Close
+		width: 2em
+		height: 2em
+		padding: 10px
+		color: $palette--color
+		position: absolute
+		right: 0
+		top: 0
+		cursor: pointer
+
+	&__Header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 20px 30px
+		border-bottom: 1px solid $palette_main--purple
+
+	&__Body
+		padding: 0
+
+	&__Overlay
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		padding: 20px 50px
+		background: rgba(0,0,0,0.7)
+		display: flex
+		overflow: auto
