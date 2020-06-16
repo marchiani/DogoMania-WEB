@@ -30,7 +30,7 @@ class Login extends React.Component {
 		this.state.timeByStart > 4 && this.setState({ timeByStart: 0 });
 		return (
 			<div className="Login--container">
-				<DogAnimation />
+				{!isMobile && <DogAnimation />}
 				<div className={classNames('Login')}>
 					<div className={classNames('Login__Modal', { 'Login__Modal--isMobile': isMobile })}>
 						<div className="Login__Modal--Header">
@@ -62,6 +62,7 @@ class Login extends React.Component {
 						</div>
 					</div>
 				</div>
+
 			</div>
 		);
 	}

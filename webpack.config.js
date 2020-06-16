@@ -97,7 +97,7 @@ module.exports = (env, argv) => {
 				filename: 'index.css',
 			}),
 			new HtmlWebpackPlugin({
-				favicon: 'src/assets/Logo.jpg',
+				favicon: 'src/assets/favicon.png',
 				template: path.resolve(PATH_RESOLVE, 'index.html'),
 			}),
 			new webpack.NamedModulesPlugin(),
