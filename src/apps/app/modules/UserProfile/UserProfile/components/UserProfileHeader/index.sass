@@ -1,0 +1,77 @@
+@import 'common/config'
+
+.UserHeader
+    background: #775d9e67
+    display: flex
+    justify-content: space-between
+    padding: 25px 25px 0 25px
+
+    &__Info
+        width: 100%
+        display: flex
+        justify-content: space-between
+
+        &--UserInfo
+
+            &--UserName
+                font-size: 30px
+
+            &--Location
+                font-weight: 700
+
+        &--Confirmation
+            color: $palette_main--blue
+            font-size: 23px
+
+            &--Tooltip
+                layer()
+                padding: 5px
+                background: #FFF
+
+    &__UserPhoto
+        display: flex
+        flex-flow: column
+        align-content: space-between
+        justify-content: space-between
+        height: 100%
+        
+        &--FaPencilAlt
+            background: none
+            border: none
+            width: 40px
+            height: 40px
+            display: flex
+            align-items: center
+
+            &:hover
+                background: $palette_main--lightBlue
+                border-radius: 50%
+            svg
+                font-size: 26px
+                color: $palette_main--lightPurple
+
+        ._Group
+            padding-top: 10px
+            display: flex
+            align-items: center
+
+    &__Rate
+        ._Grid__Col
+            
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-flow: column
+            padding: 10px 10px 0 10px
+            font-size: 16px
+
+            div
+                font-size: 36px
+                color: $palette_main--blue
+                font-weight: 700
+        
+    img
+        width: 150px
+        height: 150px
+        border-radius: 50%
+        margin-top: -25px

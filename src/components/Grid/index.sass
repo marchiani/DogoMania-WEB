@@ -1,0 +1,40 @@
+$grid_cols: 12
+$grid_gutter: 20px
+
+._Grid
+	width: 100%
+	//overflow: hidden // @TODO: fix it!!! Should remove hidden
+
+	&--noHidden
+		overflow: visible
+
+	&__Row
+		width: 100%
+		padding: 10px
+		display: flex
+		flex-wrap: wrap
+		margin: (- $grid_gutter / 2)
+
+	&__Col
+		padding: ($grid_gutter / 2)
+		flex: 1 0 0
+
+		@for $col from 1 through $grid_cols
+			$percent: 1 / 12  * $col
+			&--#{$col}
+				width: percentage($percent)
+				flex: 0 0 percentage($percent)
+
+			&--ColOffset_#{$col}
+				margin-left: percentage($percent)
+
+		&--Align
+
+			&Start
+				align-self: flex-start
+
+			&End
+				align-self: flex-end
+
+			&Center
+				align-self: center

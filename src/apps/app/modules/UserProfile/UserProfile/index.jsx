@@ -1,14 +1,19 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 
+import { FaPencilAlt, FaMapMarkerAlt } from 'react-icons/fa';
+
 import UserProfileModel from 'models/User';
 
 import Group from 'components/Group';
+import Grid from 'components/Grid';
 import Button from 'components/Button';
+
+import UserProfileHeader from './components/UserProfileHeader';
 
 import store from 'store';
 
-import logo from 'assets/DOGO.MANIA.png';
+import logo from 'assets/Avatar.jpg';
 
 export default
 @observer
@@ -27,14 +32,11 @@ class UserProfile extends React.Component {
 	render() {
 		return (
 			<div className="UserProfile">
-				<section className="UserProfile__Header">
-					<div className="UserProfile__Header__Header">
-						<Group>
-							<Button>Do order</Button>
-						</Group>
-						<img src={logo} alt="UserPhoto" />
-					</div>
-				</section>
+				<div className="UserProfile__Modal">
+					<section className="UserProfile__Modal__Header">
+						<UserProfileHeader />
+					</section>
+				</div>
 			</div>
 		);
 	}
